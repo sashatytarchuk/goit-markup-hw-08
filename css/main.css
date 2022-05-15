@@ -22,24 +22,6 @@ body {
   letter-spacing: 0.03em;
 }
 
-@media screen and (min-width: 480px) {
-  body {
-    width: 480px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  body {
-    width: 768px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  body {
-    width: 1200px;
-  }
-}
-
 .container {
   padding: 0 15px;
   max-width: 1200px;
