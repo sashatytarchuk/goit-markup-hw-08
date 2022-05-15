@@ -1,0 +1,27 @@
+.logo-link {
+    color: getColor('logo-black-color');
+    text-decoration: none;
+    font-family: Raleway, sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    margin-right: 93px;
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0;
+    &:hover, &:focus{
+        transform: scale(1.05);
+    }
+}
+
+.logo-web {
+    color: getColor('button-and-logo-color');
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+}
+
+.logo-link__footer {
+    color: getColor('white-color');
+}

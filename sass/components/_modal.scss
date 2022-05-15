@@ -1,0 +1,267 @@
+.backdrop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: getColor('backdrop-overlay-color');
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50% -50%);
+    transition-property: scale, opacity;
+    transition-delay: 0ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
+    &.is-hidden{
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+.modal {
+    padding: 40px;
+    position: fixed;
+    top: auto;
+    left: auto;
+    width: 528px;
+    height: 581px;
+    background-color: getColor('white-color');
+    border-radius: 4px;
+}
+
+.modal-close-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid getColor('close-button-border');
+    background-color: transparent;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    color: getColor('logo-black-color');
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0;
+    &:hover{
+        color: getColor('button-and-logo-color');
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+    &:focus{
+        color: getColor('button-and-logo-color');
+        transform: scale(1.1);
+        outline: none;
+    }
+}
+
+.modal-close-icon {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+    &:hover, &:focus{
+        fill: currentColor;
+    }
+}
+
+.modal-form-title {
+    color: getColor('headings-color');
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 12px;
+}
+
+.form-element {
+    display: block;
+    color: getColor('logo-black-color');
+    margin-bottom: 10px;
+    &:hover{
+        color: getColor('button-and-logo-color');
+    }
+    &:focus-within{
+        color: getColor('button-and-logo-color');
+        outline: none;
+    }
+}
+
+.label-title {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: getColor('paragraph-color');
+    display: block;
+    margin-bottom: 4px;
+}
+
+.form-icon {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+    position: absolute;
+    &.name{
+        top: 104px;
+        left: 53px;
+    }
+    &.phone{
+        top: 172px;
+        left: 53px;
+    }
+    &.email{
+        top: 240px;
+        left: 53px;
+    }
+}
+
+.form-area {
+    width: 448px;
+    height: 40px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 12px 12px 12px 42px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    color: getColor('paragraph-color');
+    &:hover{
+        border-color: getColor('button-and-logo-color');
+    }
+    &:focus-within{
+        border-color: getColor('button-and-logo-color');
+        outline: none;
+    }
+}
+
+.comment-label {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.comment-area{
+    position: relative;
+    width: 448px;
+    height: 120px;
+    border: 1px solid getColor('form-area-border');
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 12px 16px;
+    color: getColor('paragraph-color');
+    &:placeholder-shown {
+        border-color: rgba(33, 33, 33, 0.2);
+    }
+    &:not(:placeholder-shown), &:focus-within{
+        border-color: getColor('button-and-logo-color');
+        outline: none;
+    }
+    &:hover{
+        border-color: getColor('button-and-logo-color');
+    }
+    &::placeholder{
+        color: getColor('modal-form-placeholder-color');
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.01em;
+        position: absolute;
+        top: 12px;
+        left: 16px;
+    }
+}
+
+.checkbox-label {
+    color: getColor('paragraph-color');
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    display: block;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: absolute;
+    &-custom{
+        display: inline-flex;
+        width: 16px;
+        height: 15px;
+        border: 1px solid getColor('logo-black-color');
+        border-radius: 2px;
+        align-items: center;
+        justify-content: center;
+        margin-right: 7px;
+    }
+    &-text{
+        display: block;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+    }
+    &:checked + &-custom{
+        background-image: url(/images/Vector7.svg);
+        background-repeat: no-repeat;
+        background-color: getColor('button-and-logo-color');
+        border-color: getColor('button-and-logo-color');
+        background-size: 13px 10px;
+        background-position: center;
+    }
+    &-icon{
+        width: 11px;
+        height: 8px;
+    }
+}
+
+.rules-link {
+    color: getColor('button-and-logo-color');
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    text-decoration-line: underline;
+}
+
+.form-button {
+    color: getColor('white-color');
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    line-height: 1.88;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: getColor('button-and-logo-color');
+    border-radius: 4px;
+    border: getColor('button-and-logo-color');
+    cursor: pointer;
+    margin: 0 auto;
+    padding: 10px 55px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    transition-property: transform,
+        background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0;
+    &:hover, &:focus{
+        background-color: getColor('button-hover-color');
+        transform: scale(1.05);
+    }
+    &:active{
+        background-color: getColor('active-button-color');
+    }
+}
+
+

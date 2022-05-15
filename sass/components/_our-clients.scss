@@ -1,0 +1,41 @@
+.our-clients-list {
+    display: flex;
+}
+
+.our-clients-item {
+    width: 170px;
+    height: 92px;
+    &:not(:last-child){
+        margin-right: 30px;
+    }
+}
+
+.clients-thumb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: none;
+    border: 1px solid getColor('thumb-border-color');
+    color: getColor('thumb-border-color');
+    border-radius: 4px;
+    transition-property: background-color, transform, color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0;
+    &:hover, &:focus{
+        border-color: getColor('hover-color');
+        color: getColor('hover-color');
+        transform: scale(1.15);
+    }
+}
+
+.our-clients-icon {
+    fill: currentColor;
+    width: 106px;
+    height: 60px;
+    &:hover, &:focus{
+        fill: currentColor;
+    }
+}

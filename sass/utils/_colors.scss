@@ -1,0 +1,34 @@
+$colors: (
+        'background-color': #ffff,
+        'header-footer-background-color': #2F303A,
+        'images-overlay-background': rgba(47, 48, 58, 0.8),
+        'hover-color': #2196F3,
+        'overlay-filter-color': rgba(33, 150, 243, 0.9),
+        'button-hover-color': #188CE8,
+        'headings-color': #212121,
+        'button-and-logo-color': #2196F3,
+        'inactive-button-color': #F5F4FA,
+        'active-button-color': #2196F3,
+        'paragraph-color': #757575,
+        'white-color': rgb(255, 255, 255),
+        'partly-white-color': rgba(255, 255, 255, 0.6),
+        'ten-percent-white-color': rgba(255, 255, 255, 0.1),
+        'logo-black-color': #000,
+        'background-light-blue-color': #F5F4FA,
+        'header-border-color': #ECECEC,
+        'card-border-color': #EEEEEE,
+        'icon-background-color': #F5F4FA,
+        'thumb-border-color': #AFB1B8,
+        'close-button-border': rgba(0, 0, 0, 0.1),
+        'subscribe-button-shadow-color': rgba(0, 0, 0, 0.1),
+        'backdrop-overlay-color': rgba(0, 0, 0, 0.2),
+        'footer-form-placeholder-color': rgba(255, 255, 255, 0.6),
+        'footer-form-border-color': rgba(255, 255, 255, 0.3),
+        'modal-form-placeholder-color': rgba(117, 117, 117, 0.5),
+        'form-area-border': rgba(33, 33, 33, 0.2),
+);
+
+
+@function getColor($key) {
+    @return map-get($colors, $key);
+}

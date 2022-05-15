@@ -1,0 +1,44 @@
+.competentions {
+    padding-top: 0;
+}
+
+.second-range-heading {
+    color: getColor('headings-color');
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 50px;
+}
+
+.images-list {
+    display: flex;
+    &>.list-item:not(:last-child){
+        margin-right: 30px;
+    }
+}
+
+.images-card {
+    position: relative;
+}
+
+.images-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    background-color: getColor('images-overlay-background');
+}
+
+.images-overlay-heading {
+    color: getColor('white-color');
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
