@@ -1,6 +1,6 @@
 .main{
     background-color: getColor('header-footer-background-color');
-    background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/background.jpg);
+    background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/bckgrnd.jpg);
     width: 480px;
     background-repeat: no-repeat;
     background-position: center;
@@ -19,14 +19,22 @@
 
 .main-heading {
     color: getColor('white-color');
-    font-size: 44px;
+    font-size: 26px;
     font-weight: 900;
     text-align: center;
     line-height: 1.36;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    max-width: 696px;
+    width: 360px;
     margin: 0 auto;
+
+    @media screen and (min-width: 768px){
+    }
+
+    @media screen and (min-width: 1200px){
+        font-size: 44px;
+        width: 696px;
+    }
 }
 
 .main-heading-button {
