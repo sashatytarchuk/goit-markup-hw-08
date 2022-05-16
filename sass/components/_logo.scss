@@ -24,4 +24,8 @@
 
 .logo-link__footer {
     color: getColor('white-color');
+
+    @media screen and (min-width: 480px){
+        margin: 0 auto;
+    }
 }

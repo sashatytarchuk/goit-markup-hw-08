@@ -1,15 +1,34 @@
 .competentions {
     padding-top: 0;
+    @media screen and (max-width: 1200px){
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+        white-space: nowrap;
+        clip-path: inset(100%);
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+    }
 }
 
 .second-range-heading {
     color: getColor('headings-color');
-    font-size: 36px;
+    font-size: 28px;
     font-weight: 700;
     line-height: 1.17;
     text-align: center;
     letter-spacing: 0.03em;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+
+    @media screen and (min-width: 768px){
+        font-size: 36px;
+    }
+    @media screen and (min-width: 1200px){
+        margin-bottom: 50px;        
+    }
 }
 
 .images-list {
