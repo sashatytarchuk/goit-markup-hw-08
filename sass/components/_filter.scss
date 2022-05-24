@@ -1,5 +1,5 @@
 .filter-button-list {
-    @media screen and (min-width: 480px){
+    @media screen and (max-width: 767px){
         flex-wrap: wrap;
         justify-content: left;
         align-items: center;
@@ -14,7 +14,7 @@
     justify-content: center;
     margin-bottom: 50px;
     &>.list-item:first-child, &>.list-item:nth-child(2), &>.list-item:nth-child(3){
-        @media screen and (min-width: 480px){
+        @media screen and (max-width: 767px){
             margin-bottom: 15px;
         }
 
