@@ -22,38 +22,61 @@
 <body class="body">
     <header class="header">
         <div class="header container">
-            <nav>
-                <a href="./index.html" class="logo-link"><span class="logo-web">Web</span>Studio</a>
-                <ul class="links-list">
+            <a href="./index.html" class="logo-link"><span class="logo-web">Web</span>Studio</a>
+            <button class="menu-button" type="button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+                <svg width="40" height="40" aria-label="mobile-menu-tumbler" <use class="icon-menu"
+                    href="./images/icons.svg#icon-menu"></use>
+                    <use class="icon-cross" href="./images/icons.svg#icon-menu-close"></use>
+                </svg>
+            </button>
+            <div class="menu-container" id="menu-container" data-menu>
+                <nav>
+                    <ul class="links-list">
+                        <li class="list-item">
+                            <a href="./index.html" class="link">Студия</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="./portfolio.html" class="link current">Портфолио</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="" class="link">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                <ul class="contacts-links">
                     <li class="list-item">
-                        <a href="./index.html" class="link">Студия</a>
+                        <a class="call-link" href="tel:+380961111111">
+                            <svg class="telephone-icon">
+                                <use href="./images/icons.svg#icon-smartphone"></use>
+                            </svg>
+                            +38 096 111 11 11
+                        </a>
                     </li>
                     <li class="list-item">
-                        <a href="./portfolio.html" class="link current">Портфолио</a>
+                        <a href="mailto:info@devstudio.com" class="mail-link">
+                            <svg class="mail-icon">
+                                <use href="./images/icons.svg#icon-envelope"></use>
+                            </svg>
+                            info@devstudio.com
+                        </a>
+                    </li>
+    
+                </ul>
+                <ul class="menu-socials-list">
+                    <li class="list-item">
+                        <a class="menu-socials-link" href="">Instagram</a>
                     </li>
                     <li class="list-item">
-                        <a href="" class="link">Контакты</a>
+                        <a class="menu-socials-link" href="">Twitter</a>
+                    </li>
+                    <li class="list-item">
+                        <a class="menu-socials-link" href="">Facebook</a>
+                    </li>
+                    <li class="list-item">
+                        <a class="menu-socials-link" href="">Linked<span class="linkedin-uppercase-letter">i</span>n</a>
                     </li>
                 </ul>
-            </nav>
-            <ul class="contacts-links">
-                <li class="list-item">                    
-                    <a href="mailto:info@devstudio.com" class="mail-link">
-                        <svg class="mail-icon">
-                            <use href="./images/icons.svg#icon-envelope"></use>
-                        </svg>
-                        info@devstudio.com
-                    </a>
-                </li>
-                <li class="list-item">                    
-                    <a href="tel:+380961111111" class="call-link">
-                        <svg class="telephone-icon">
-                            <use href="./images/icons.svg#icon-smartphone"></use>
-                        </svg>
-                        +38 096 111 11 11
-                    </a>
-                </li>
-            </ul>
+            </div>
         </div>
     </header>
     <main>
