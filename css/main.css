@@ -22,6 +22,10 @@ body {
   letter-spacing: 0.03em;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 .container {
   padding: 0 15px;
   max-width: 1600px;
@@ -750,6 +754,7 @@ body {
 
 .header {
   border-bottom: 1px solid #ECECEC;
+  position: relative;
 }
 
 .header.container {
@@ -768,6 +773,67 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.menu-button {
+  border: none;
+  background-color: transparent;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 0;
+  margin: 0;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.menu-button .icon-cross {
+  display: none;
+}
+
+.menu-button.is-open .icon-cross {
+  display: block;
+}
+
+.menu-button.is-open .icon-menu {
+  display: none;
+}
+
+.menu-button .icon-menu {
+  display: block;
+}
+
+.menu-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 796px;
+  background-color: blue;
+  display: none;
+}
+
+.menu-container.is-open {
+  display: block;
+}
+
+.backdrop-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.backdrop-menu.is-hidden {
+  display: none;
+}
+
+.modal-menu {
+  padding: 0;
+  background-color: white;
 }
 
 .links-list {
@@ -993,9 +1059,9 @@ nav {
   color: #000;
   text-decoration: none;
   font-family: Raleway, sans-serif;
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 700;
-  line-height: 1.19;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   margin-right: 93px;
   -webkit-transition-property: -webkit-transform;
@@ -1068,14 +1134,27 @@ nav {
 }
 
 .modal {
+  width: 450px;
+  height: 609px;
+  top: 93px;
   padding: 40px;
   position: fixed;
-  top: auto;
   left: auto;
-  width: 528px;
-  height: 581px;
   background-color: white;
   border-radius: 4px;
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    top: 208px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .modal-close-button {
@@ -1124,6 +1203,9 @@ nav {
 }
 
 .modal-close-icon {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   width: 18px;
   height: 18px;
   fill: currentColor;
@@ -1134,6 +1216,7 @@ nav {
 }
 
 .modal-form-title {
+  width: 370px;
   color: #212121;
   font-weight: 700;
   font-size: 20px;
@@ -1141,6 +1224,12 @@ nav {
   text-align: center;
   letter-spacing: 0.03em;
   margin-bottom: 12px;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-form-title {
+    width: 448px;
+  }
 }
 
 .form-element {
@@ -1176,22 +1265,40 @@ nav {
 }
 
 .form-icon.name {
-  top: 104px;
+  top: 126px;
   left: 53px;
+}
+
+@media screen and (min-width: 1200px) {
+  .form-icon.name {
+    top: 104px;
+  }
 }
 
 .form-icon.phone {
-  top: 172px;
+  top: 194px;
   left: 53px;
+}
+
+@media screen and (min-width: 1200px) {
+  .form-icon.phone {
+    top: 174px;
+  }
 }
 
 .form-icon.email {
-  top: 240px;
+  top: 262px;
   left: 53px;
 }
 
+@media screen and (min-width: 1200px) {
+  .form-icon.email {
+    top: 240px;
+  }
+}
+
 .form-area {
-  width: 448px;
+  width: 370px;
   height: 40px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1199,6 +1306,12 @@ nav {
   padding: 12px 12px 12px 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   color: #757575;
+}
+
+@media screen and (min-width: 1200px) {
+  .form-area {
+    width: 448px;
+  }
 }
 
 .form-area:hover {
@@ -1216,8 +1329,8 @@ nav {
 }
 
 .comment-area {
+  width: 370px;
   position: relative;
-  width: 448px;
   height: 120px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   -webkit-box-sizing: border-box;
@@ -1225,6 +1338,12 @@ nav {
   border-radius: 4px;
   padding: 12px 16px;
   color: #757575;
+}
+
+@media screen and (min-width: 1200px) {
+  .comment-area {
+    width: 448px;
+  }
 }
 
 .comment-area:placeholder-shown {
@@ -1328,11 +1447,17 @@ nav {
 }
 
 .checkbox-text {
+  font-size: 12px;
   display: block;
-  font-size: 14px;
   font-weight: 400;
   line-height: 1.71;
   letter-spacing: 0.03em;
+}
+
+@media screen and (min-width: 1200px) {
+  .checkbox-text {
+    font-size: 14px;
+  }
 }
 
 .checkbox:checked + .checkbox-custom {
@@ -1350,13 +1475,19 @@ nav {
 }
 
 .rules-link {
+  font-size: 12px;
   color: #2196F3;
   font-weight: 400;
-  font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
+}
+
+@media screen and (min-width: 1200px) {
+  .rules-link {
+    font-size: 14px;
+  }
 }
 
 .form-button {
