@@ -23,12 +23,23 @@
 }
 
 .modal {
+    width: 450px;
+    height: 609px;
+    top: 93px;
+    
+    @media screen and (min-width: 768px){
+        top: 208px;
+    }
+
+    @media screen and (min-width: 1200px){
+        width: 528px;
+        height: 581px;
+    }
+    
     padding: 40px;
     position: fixed;
-    top: auto;
-    left: auto;
-    width: 528px;
-    height: 581px;
+    
+    left: auto;    
     background-color: getColor('white-color');
     border-radius: 4px;
 }
@@ -63,6 +74,7 @@
 }
 
 .modal-close-icon {
+    align-self: center;
     width: 18px;
     height: 18px;
     fill: currentColor;
@@ -72,6 +84,11 @@
 }
 
 .modal-form-title {
+    width: 370px;
+
+    @media screen and (min-width: 1200px){
+        width: 448px;
+    }
     color: getColor('headings-color');
     font-weight: 700;
     font-size: 20px;
@@ -110,21 +127,35 @@
     fill: currentColor;
     position: absolute;
     &.name{
-        top: 104px;
+        top: 126px;
+        @media screen and (min-width: 1200px){
+            top: 104px;
+        }        
         left: 53px;
     }
     &.phone{
-        top: 172px;
+        top: 194px;
+        @media screen and (min-width: 1200px){
+            top: 174px;
+        }        
         left: 53px;
     }
     &.email{
-        top: 240px;
+        top: 262px;
+        @media screen and (min-width: 1200px) {
+            top: 240px;
+        }        
         left: 53px;
     }
 }
 
 .form-area {
-    width: 448px;
+    width: 370px;
+
+    @media screen and (min-width: 1200px){
+        width: 448px;
+    }
+    
     height: 40px;
     box-sizing: border-box;
     border-radius: 4px;
@@ -146,8 +177,13 @@
 }
 
 .comment-area{
+    width: 370px;
+
+    @media screen and (min-width: 1200px){
+        width: 448px;
+    }
     position: relative;
-    width: 448px;
+    
     height: 120px;
     border: 1px solid getColor('form-area-border');
     box-sizing: border-box;
@@ -205,8 +241,12 @@
         margin-right: 7px;
     }
     &-text{
-        display: block;
-        font-size: 14px;
+        font-size: 12px;
+        
+        @media screen and (min-width: 1200px){
+            font-size: 14px;
+        }
+        display: block;        
         font-weight: 400;
         line-height: 1.71;
         letter-spacing: 0.03em;
@@ -226,9 +266,13 @@
 }
 
 .rules-link {
+    font-size: 12px;
+
+    @media screen and (min-width: 1200px){
+        font-size: 14px;
+    }
     color: getColor('button-and-logo-color');
-    font-weight: 400;
-    font-size: 14px;
+    font-weight: 400;    
     line-height: 1.71;
     letter-spacing: 0.03em;
     text-decoration-line: underline;
