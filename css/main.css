@@ -162,9 +162,10 @@ body.modal-open {
   color: #757575;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 480px) {
   .filter-item {
     width: 450px;
+    margin-bottom: 30px;
   }
 }
 
@@ -234,8 +235,28 @@ body.modal-open {
 }
 
 .filter-image {
+  height: 294px;
+  margin-right: 0;
   position: relative;
   overflow: hidden;
+}
+
+@media screen and (max-width: 480px) {
+  .filter-image {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .filter-image {
+    width: 354px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .filter-image {
+    width: 370px;
+  }
 }
 
 .filter-overlay {
@@ -303,7 +324,7 @@ body.modal-open {
   padding-bottom: 60px;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 1199px) {
   .footer-content {
     text-align: center;
   }
@@ -321,12 +342,6 @@ body.modal-open {
   }
 }
 
-@media screen and (min-width: 480px) {
-  .footer-inner-content {
-    margin-bottom: 60px;
-  }
-}
-
 @media screen and (min-width: 768px) {
   .footer-inner-content {
     display: -webkit-box;
@@ -338,6 +353,11 @@ body.modal-open {
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .footer-inner-content {
     margin-bottom: 60px;
   }
 }
@@ -348,7 +368,7 @@ body.modal-open {
   }
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .footer-contacts {
     margin-bottom: 60px;
   }
@@ -599,7 +619,6 @@ body.modal-open {
 }
 
 .footer-subscribe-form {
-  width: 358px;
   height: 50px;
   background-color: #2F303A;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -622,6 +641,11 @@ body.modal-open {
 @media screen and (min-width: 480px) {
   .footer-subscribe-form {
     width: 450px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .footer-subscribe-form {
     margin-bottom: 20px;
   }
 }
@@ -692,6 +716,7 @@ body.modal-open {
 }
 
 .footer-subscribe-button {
+  margin: 0 auto;
   width: 200px;
   height: 50px;
   display: -webkit-box;
@@ -725,12 +750,6 @@ body.modal-open {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   -webkit-transition-delay: 0;
           transition-delay: 0;
-}
-
-@media screen and (min-width: 480px) {
-  .footer-subscribe-button {
-    margin: 0 auto;
-  }
 }
 
 .footer-subscribe-button:hover {
@@ -784,14 +803,13 @@ nav {
 .menu-button {
   border: none;
   background-color: transparent;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: block;
   padding: 0;
   margin: 0;
   width: 40px;
   height: 40px;
   cursor: pointer;
+  z-index: 2;
 }
 
 @media screen and (min-width: 768px) {
@@ -800,7 +818,7 @@ nav {
   }
 }
 
-.icon-menu {
+.menu-button .icon-menu {
   display: block;
 }
 
@@ -814,6 +832,10 @@ nav {
 
 .menu-button.is-open .icon-cross {
   display: block;
+}
+
+.menu-container {
+  z-index: 1;
 }
 
 @media screen and (max-width: 767px) {
@@ -858,9 +880,9 @@ nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -873,6 +895,10 @@ nav {
   }
 }
 
+.menu-socials-list > .list-item:not(:last-child) {
+  margin-right: 10px;
+}
+
 .menu-socials-link {
   font-weight: 500;
   font-size: 18px;
@@ -880,6 +906,16 @@ nav {
   letter-spacing: 0.02em;
   color: #2196F3;
   text-decoration: none;
+}
+
+.linkedin-uppercase-letter {
+  text-transform: uppercase;
+}
+
+.menu-socials-line {
+  width: 1px;
+  height: 22px;
+  background-color: rgba(33, 33, 33, 0.2);
 }
 
 @media screen and (max-width: 767px) {
@@ -1218,6 +1254,9 @@ nav {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   -webkit-transition-delay: 0;
           transition-delay: 0;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .logo-link:hover, .logo-link:focus {
@@ -1231,12 +1270,36 @@ nav {
   letter-spacing: 0.03em;
 }
 
-.logo-link__footer {
+.logo-link-footer {
+  text-decoration: none;
+  font-family: Raleway, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   color: white;
 }
 
-@media screen and (min-width: 480px) {
-  .logo-link__footer {
+.logo-link-footer:hover, .logo-link-footer:focus {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+@media screen and (max-width: 1199px) {
+  .logo-link-footer {
     margin: 0 auto;
   }
 }
@@ -1283,6 +1346,7 @@ nav {
   top: 93px;
   padding: 40px;
   position: fixed;
+  overflow-y: scroll;
   left: auto;
   background-color: white;
   border-radius: 4px;
@@ -1692,8 +1756,13 @@ nav {
 }
 
 .advantages-list > .list-item {
-  width: 450px;
   margin-bottom: 30px;
+}
+
+@media screen and (min-width: 480px) {
+  .advantages-list > .list-item {
+    width: 450px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1772,8 +1841,13 @@ nav {
   color: #757575;
   line-height: 24px;
   letter-spacing: 0.03em;
-  width: 450px;
   margin: 0;
+}
+
+@media screen and (min-width: 480px) {
+  .advantages-text {
+    width: 450px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1803,11 +1877,16 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 450px;
   height: 120px;
   background-color: #F5F4FA;
   border-radius: 4px;
   margin-bottom: 30px;
+}
+
+@media screen and (min-width: 480px) {
+  .thumb {
+    width: 450px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1848,6 +1927,12 @@ nav {
         flex-wrap: nowrap;
     margin-left: 0;
     margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .our-clients-item:not(:last-child) {
+    margin-bottom: 30px;
   }
 }
 
@@ -2016,9 +2101,29 @@ nav {
   background-color: #F5F4FA;
 }
 
+@media screen and (min-width: 480px) {
+  .our-team-photo {
+    width: 450px;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .our-team-photo {
+    width: 354px;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .our-team-photo {
+    width: 270px;
+    height: auto;
+  }
+}
+
 .our-team-list > .list-item {
   background-color: white;
-  width: 450px;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
   -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
@@ -2055,7 +2160,7 @@ nav {
   }
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .our-team-list > .list-item:not(:last-child) {
     margin-bottom: 30px;
   }
@@ -2195,12 +2300,17 @@ nav {
   background-color: #2F303A;
   background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(/images/bckgrnd.jpg);
   background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/bckgrnd.jpg);
-  width: 480px;
   background-repeat: no-repeat;
   background-position: center;
   margin-left: auto;
   margin-right: auto;
   padding: 200px 0;
+}
+
+@media screen and (min-width: 480px) {
+  .main {
+    width: 480px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -2225,8 +2335,13 @@ nav {
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  width: 360px;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 480px) {
+  .main-heading {
+    width: 360px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
