@@ -24,9 +24,10 @@
     margin-bottom: 30px;
 
     @media screen and (min-width: 768px){
-        font-size: 36px;
+        
     }
     @media screen and (min-width: 1200px){
+        font-size: 36px;
         margin-bottom: 50px;        
     }
 }
@@ -40,6 +41,14 @@
 
 .images-card {
     position: relative;
+}
+
+.competentions-image {
+
+    @media screen and (min-width: 1200px) {
+        width: 370px;
+        height: auto;
+    }
 }
 
 .images-overlay {

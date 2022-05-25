@@ -34,11 +34,11 @@
     @media screen and (min-width: 1200px){
         width: 528px;
         height: 581px;
+        top: auto;
     }
     
     padding: 40px;
     position: fixed;
-    overflow-y: scroll;
     left: auto;    
     background-color: getColor('white-color');
     border-radius: 4px;

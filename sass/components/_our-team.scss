@@ -3,10 +3,6 @@
 }
 
 .our-team-photo{
-    @media screen and (min-width: 480px){
-        width: 450px;
-        height: auto;
-    }
 
     @media screen and (min-width: 768px) {
         width: 354px;
@@ -30,23 +26,15 @@
                     0 1px 1px 0 rgba(0, 0, 0, 0.14),
                     0 2px 1px 0 rgba(0, 0, 0, 0.2);
 
-        @media screen and (min-width: 480px){
-            width: 450px;
-            height: 622px;
-        }
 
         @media screen and (min-width: 768px){
             margin-left: 30px;
             margin-top: 30px;
             flex-basis: calc((100% - 60px) / 2);
-            width: 354px;
-            height: 536px;
         }  
         
         @media screen and (min-width: 1200px) {
-            width: 270px;
-            height: 428px;
-            flex-basis: calc((100% - 120px) / 4);
+            flex-basis: calc((100% - 90px) / 4);
             margin-left: 0;
             margin-top: 0;
             margin-bottom: 0;
@@ -68,13 +56,11 @@
         display: flex;        
         margin-left: -30px;
         margin-top: -30px;
-        width: 738px;
         flex-wrap: wrap;
     }
 
     @media screen and (min-width: 1200px){
         flex-wrap: nowrap;
-        width: 1200px;
         margin-left: 0;
         margin-top: 0;
     }
