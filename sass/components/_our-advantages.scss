@@ -12,9 +12,11 @@
 }
 
 .advantages-list { 
-    &>.list-item{
-        width: 450px;
+    &>.list-item{        
         margin-bottom: 30px;
+        @media screen and (min-width: 480px){
+            width: 450px;
+        }
         @media screen and (min-width: 768px) {
             flex-basis: calc((100% - 60px) / 2);
             width: 354px;
@@ -74,9 +76,12 @@
     font-size: 14px;
     color: getColor('paragraph-color');
     line-height: 24px;
-    letter-spacing: 0.03em;
-    width: 450px;
+    letter-spacing: 0.03em;    
     margin: 0;
+
+    @media screen and (min-width: 480px){
+        width: 450px;
+    }
 
     @media screen and (min-width: 768px) {
         width: 354px;
@@ -95,12 +100,15 @@
 .thumb {
     display: flex;
     justify-content: center;
-    align-items: center;
-    width: 450px;
+    align-items: center;    
     height: 120px;
     background-color: getColor('icon-background-color');
     border-radius: 4px;
     margin-bottom: 30px;
+
+    @media screen and (min-width: 480px){
+        width: 450px;
+    }
 
     @media screen and (min-width: 768px){
         width: 354px;

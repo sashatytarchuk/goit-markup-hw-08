@@ -21,19 +21,20 @@ nav{
 .menu-button{
     border: none;
     background-color: transparent;
-    display: inline-flex;
+    display: block;
     padding: 0;
     margin: 0;
     width: 40px;
     height: 40px;
     cursor: pointer;
+    z-index: 2;
 
     @media screen and (min-width: 768px){
         display: none;
     }
 }
 
-.icon-menu{
+.menu-button .icon-menu{
     display: block;
 }
 
@@ -51,7 +52,7 @@ nav{
 
 
 .menu-container{
-
+    z-index: 1;
     @media screen and (max-width: 767px){
        position: absolute;
         top: 0;
@@ -84,11 +85,15 @@ nav{
 .menu-socials-list{
     @media screen and (max-width: 767px){
         display: flex;
-        justify-content: space-between;
+        justify-content: left;
         align-items: center;
     }
     @media screen and (min-width: 768px){
         display: none;
+    }
+
+    &>.list-item:not(:last-child){
+        margin-right: 10px;
     }
     
 }
@@ -102,6 +107,15 @@ nav{
     text-decoration: none;
 }
 
+.linkedin-uppercase-letter{
+    text-transform: uppercase;
+}
+
+.menu-socials-line{
+    width: 1px;
+    height: 22px;
+    background-color: getColor('form-area-border');
+}
 
 .links-list {
     &>.list-item:not(:last-child){
