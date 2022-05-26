@@ -956,7 +956,19 @@ nav {
   .link.current::after {
     content: "";
     position: absolute;
-    bottom: -34px;
+    bottom: -43px;
+    left: 0;
+    width: 100%;
+    border-bottom: 4px solid #2196F3;
+    border-radius: 2px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .link.current::after {
+    content: "";
+    position: absolute;
+    bottom: -32px;
     left: 0;
     width: 100%;
     border-bottom: 4px solid #2196F3;
