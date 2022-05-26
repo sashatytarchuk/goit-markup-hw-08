@@ -42,6 +42,14 @@ nav{
         color: getColor('hover-color');
         fill: currentColor;
     }
+    &:active{
+        color: getColor('hover-color');
+        fill: currentColor;
+    }
+    &:focus {
+        color: getColor('hover-color');
+        fill: currentColor;
+    }
 }
 
 .menu-button.is-open .icon-menu{
@@ -59,6 +67,15 @@ nav{
     display: block;
     
         &:hover {
+            color: getColor('hover-color');
+            fill: currentColor;
+        }
+        &:active {
+            color: getColor('hover-color');
+            fill: currentColor;
+        }
+        
+        &:focus {
             color: getColor('hover-color');
             fill: currentColor;
         }
