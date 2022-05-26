@@ -829,6 +829,16 @@ nav {
   fill: currentColor;
 }
 
+.menu-button .icon-menu:active {
+  color: #2196F3;
+  fill: currentColor;
+}
+
+.menu-button .icon-menu:focus {
+  color: #2196F3;
+  fill: currentColor;
+}
+
 .menu-button.is-open .icon-menu {
   display: none;
 }
@@ -845,6 +855,16 @@ nav {
 }
 
 .menu-button.is-open .icon-cross:hover {
+  color: #2196F3;
+  fill: currentColor;
+}
+
+.menu-button.is-open .icon-cross:active {
+  color: #2196F3;
+  fill: currentColor;
+}
+
+.menu-button.is-open .icon-cross:focus {
   color: #2196F3;
   fill: currentColor;
 }
