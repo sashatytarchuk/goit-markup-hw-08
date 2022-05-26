@@ -811,7 +811,14 @@ nav {
 }
 
 .menu-button .icon-menu {
+  color: #000;
+  fill: currentColor;
   display: block;
+}
+
+.menu-button .icon-menu:hover {
+  color: #2196F3;
+  fill: currentColor;
 }
 
 .menu-button.is-open .icon-menu {
@@ -824,6 +831,14 @@ nav {
 
 .menu-button.is-open .icon-cross {
   display: block;
+  color: #000;
+  fill: currentColor;
+  display: block;
+}
+
+.menu-button.is-open .icon-cross:hover {
+  color: #2196F3;
+  fill: currentColor;
 }
 
 .menu-container {
