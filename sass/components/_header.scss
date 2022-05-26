@@ -35,7 +35,13 @@ nav{
 }
 
 .menu-button .icon-menu{
+    color: getColor('logo-black-color');
+    fill: currentColor;
     display: block;
+    &:hover{
+        color: getColor('hover-color');
+        fill: currentColor;
+    }
 }
 
 .menu-button.is-open .icon-menu{
@@ -48,6 +54,14 @@ nav{
 
 .menu-button.is-open .icon-cross{
     display: block;
+    color: getColor('logo-black-color');
+    fill: currentColor;
+    display: block;
+    
+        &:hover {
+            color: getColor('hover-color');
+            fill: currentColor;
+        }
 }
 
 
@@ -150,10 +164,20 @@ nav{
     position: relative;
 
     &::after{
-        @media screen and (min-width: 768px){
+        @media screen and (min-width: 768px) {
             content: "";
             position: absolute;
-            bottom: -34px;
+            bottom: -43px;
+            left: 0;
+            width: 100%;
+            border-bottom: 4px solid getColor('button-and-logo-color');
+            border-radius: 2px;
+            }
+
+        @media screen and (min-width: 1200px){
+            content: "";
+            position: absolute;
+            bottom: -32px;
             left: 0;
             width: 100%;
             border-bottom: 4px solid getColor('button-and-logo-color');
