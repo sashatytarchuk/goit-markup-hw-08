@@ -1,86 +1,92 @@
-.main{
-    background-color: getColor('header-footer-background-color');
-    background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/bckgrnd.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 118px 0;
-    
+.main {
+  background-color: getColor("header-footer-background-color");
+  background-image: linear-gradient(
+      to top,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ), url(images/bckgrnd.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 118px 0;
 
-    @media screen and (min-width: 480px){
-    }
-    @media screen and (min-width: 768px){
-        
-    }
+  @media screen and (min-width: 480px) {
+  }
+  @media screen and (min-width: 768px) {
+  }
 
-    @media screen and (min-width: 1200px){
-        width: 1600px;
-        padding: 200px 0;
-    }
+  @media screen and (min-width: 1200px) {
+    width: 1600px;
+    padding: 200px 0;
+  }
 }
 
 @media (min-device-pixel-ratio: 2),
-(-webkit-min-device-pixel-ratio: 2),
-(min-resolution: 192dpi),
-(min-resolution: 2dppx){
-    .main{
-        background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/bckgrnd@2x.jpg);
-    }
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .main {
+    background-image: linear-gradient(
+        to top,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(/images/bckgrnd@2x.jpg);
+  }
 }
 
 .main-heading {
-    color: getColor('white-color');
-    font-size: 26px;
-    font-weight: 900;
-    text-align: center;
-    line-height: 1.36;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;    
-    margin: 0 auto;
-    @media screen and (min-width: 480px){
-        width: 360px;
-    }
-    @media screen and (min-width: 768px){
-    }
+  color: getColor("white-color");
+  font-size: 26px;
+  font-weight: 900;
+  text-align: center;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: 0 auto;
+  @media screen and (min-width: 480px) {
+    width: 360px;
+  }
+  @media screen and (min-width: 768px) {
+  }
 
-    @media screen and (min-width: 1200px){
-        font-size: 44px;
-        width: 696px;
-    }
+  @media screen and (min-width: 1200px) {
+    font-size: 44px;
+    width: 696px;
+  }
 }
 
 .main-heading-button {
-    color: getColor('white-color');
-    font-size: 16px;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    line-height: 1.88;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    background-color: getColor('button-and-logo-color');
-    border-radius: 4px;
-    border: getColor('button-and-logo-color');
-    cursor: pointer;
-    margin: 30px auto 0;
-    padding: 10px 32px;
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-    transition-property: transform, background-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 0;
-    &:hover{
-        background-color: getColor('button-hover-color');
-        transform: scale(1.05);
-        }
-    &:focus{
-        background-color: getColor('button-hover-color');
-        transform: scale(1.05);
-        outline: none;
-    }
-    &:active{
-        background-color: getColor('active-button-color');
-    }
+  color: getColor("white-color");
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1.88;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background-color: getColor("button-and-logo-color");
+  border-radius: 4px;
+  border: getColor("button-and-logo-color");
+  cursor: pointer;
+  margin: 30px auto 0;
+  padding: 10px 32px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  transition-property: transform, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
+  &:hover {
+    background-color: getColor("button-hover-color");
+    transform: scale(1.05);
+  }
+  &:focus {
+    background-color: getColor("button-hover-color");
+    transform: scale(1.05);
+    outline: none;
+  }
+  &:active {
+    background-color: getColor("active-button-color");
+  }
 }
-
